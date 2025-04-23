@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <form action="cadastraCliente.php" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+    
+                <label for="name">Nome: </label>
+                <input type="text" id="name" minlength="3" maxlength="50" autofocus required>
+    
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" required>
+    
+                <label for="cpf">CPF: </label>
+                <input type="text" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+    
+                <label for="idade">Idade: </label>
+                <input type="number" id="idade" required>
+    
+                <label for="telefone">Telefone: </label>
+                <input type="tel" id="telefone" required>
+    
+                <label hidden for="sexo">Sexo:</label>
+                <select hidden id="sexo">
+                    <option value="1">Masculino</option>
+                    <option value="2">Feminino</option>
+                    <option value="3">Outro</option>
+                </select>
+    
+                <label for="estado_civil">Estado Civil:</label>
+                <input type="radio" id="solteiro" name="opcao" value="Solteiro">Solteiro
+                <input type="radio" id="casado" name="opcao" value="Casado">Casado
+                <input type="radio" id="divorciado" name="opcao" value="Divorciado">Divorciado
+    
+                <label for="data_nascimento">Data de nascimento:</label>
+                <input type="date" id="data_nascimento">
+            </fieldset>
+    
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+                
+                <label for="cep">CEP: </label>
+                <input type="number" id="cep" required>
+                
+                <label for="logradouro">Logradouro:</label>
+                <input type="checkbox" id="rua" value="Rua">Rua
+                <input type="checkbox" id="avenida" value="Avenida">Avenida
+                <input type="checkbox" id="condominio" value="Condomínio">Condomínio
+                <input type="checkbox" id="praca" value="Praça">Praça
+                <input type="checkbox" id="rodovia" value="Rodovia">Rodovia
+    
+                <label for="bairro">Bairro: </label>
+                <input type="text" id="bairro" required>
+    
+                <label for="cidade">Cidade: </label>
+                <input type="text" id="cidade" required>
+    
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" required>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+    
+                <label for="livros">Quais livros você gosta: </label>    
+                <textarea rows="4" cols="50" id="livros">Escreva os livros que você gosta aqui</textarea>
+            
+                
+                <label for="jogos">Quais jogos você gosta: </label>    
+                <textarea rows="4" cols="50" id="jogos">Escreva os jogos que você gosta aqui</textarea>
+            
+                <label for="arquivo">Escolha um arquivo</label>
+                <input type="file" id="arquivo" name="arquivo">
+                
+                <label for="animais">Qual animal você tem ou teria na sua casa?</label>
+                <select id="animais">
+                    <option value="1">Cachorro</option>
+                    <option value="2">Gato</option>
+                    <option value="3">Outro</option>
+                    <option value="4">Não gosto de animais</option>
+                </select>
+    
+            </fieldset>
+            <button>Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
